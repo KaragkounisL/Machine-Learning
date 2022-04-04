@@ -1,3 +1,4 @@
+# Neural Network for the AND gate problem
 import numpy as np
 
 
