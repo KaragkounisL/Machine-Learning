@@ -1,6 +1,5 @@
 library(tidytext)
 library(tidyverse)
-library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(janeaustenr)
@@ -37,7 +36,7 @@ bing <- get_sentiments("bing")
 
 
 Emma_sentiment <- tidy_data %>%
-  inner_join(bing) %>%
+  inner_join(bing, relationship = "many-to-many") %>%
   count(book = "Emma" , index = linenumber %/% 80, sentiment) %>%
   spread(sentiment, n, fill = 0) %>%
   mutate(sentiment = positive - negative)
