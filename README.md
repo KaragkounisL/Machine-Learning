@@ -1,2 +1,2 @@
 # Machine-Learning
-Projects on Machine Learning as i learn about the subject
+Projects on Machine Learning as I learn about the subject
